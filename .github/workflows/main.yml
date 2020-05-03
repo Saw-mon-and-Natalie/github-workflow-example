@@ -12,3 +12,19 @@ jobs:
                 who-to-greet: 'Mona the Octocat'
         -   name: Get the output time
             run: echo "The time was ${{ steps.hello.outputs.time }}"
+    
+    deploy:
+        runs-on: ubuntu-latest
+        name: testing gh-pages deploy
+        steps:
+        -   name: Checkout
+            uses: action/checkout@master
+
+        -   name: Build and deploy
+            uses: JamesIves/github-pages-deploy-action@releases/v2
+            env:
+                ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                BASE_BRANCH: master
+                BRANCH: gh-pages
+                FOLDER: dist
+                BUILD_SCRIPT: ./scripts.sh
