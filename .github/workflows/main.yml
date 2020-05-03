@@ -7,7 +7,7 @@ jobs:
         steps:
         -   name: Hello world action step
             id: hello
-            uses: Saw-mon-and-Natalie/hello-world-docker-action@v1
+            uses: Saw-mon-and-Natalie/hello-world-docker-action@v1.0.1
             with:
                 who-to-greet: 'Mona the Octocat'
         -   name: Get the output time
