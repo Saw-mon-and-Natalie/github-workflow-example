@@ -27,4 +27,4 @@ jobs:
                 BASE_BRANCH: master
                 BRANCH: gh-pages
                 FOLDER: dist
-                BUILD_SCRIPT: ./scripts.sh
+                BUILD_SCRIPT: ". ./scripts.sh"
