@@ -2,9 +2,6 @@
 
 set -e
 
-if [ "$(ls | grep 'dist' | wc -l)" -eq 0 ]; 
-then
-    mkdir dist
-fi
+mkdir -p dist
 
 echo "$(date)" >> dist/index.html
