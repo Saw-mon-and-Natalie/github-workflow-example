@@ -7,4 +7,4 @@ then
     mkdir dist
 fi
 
-echo "$(date)" > dist/index.html
+echo "$(date)" >> dist/index.html
