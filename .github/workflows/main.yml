@@ -21,10 +21,10 @@ jobs:
             uses: actions/checkout@master
 
         -   name: Build and deploy
-            uses: Saw-mon-and-Natalie/gh-pages-deployment-action@v1.0.12
+            uses: Saw-mon-and-Natalie/gh-pages-deployment-action@v1.0.13
             env:
                 ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 BASE_BRANCH: master
                 BRANCH: gh-pages
                 FOLDER: dist
-                BUILD_SCRIPT: "ls -la / && ls -la ../ && echo \"$PWD\" && . ./script.sh"
+                BUILD_SCRIPT: ". ./script.sh"
