@@ -27,4 +27,4 @@ jobs:
                 BASE_BRANCH: master
                 BRANCH: gh-pages
                 FOLDER: dist
-                BUILD_SCRIPT: "ls -la && echo "$PWD" && . ./script.sh"
+                BUILD_SCRIPT: `ls -la && echo "$PWD" && . ./script.sh`
