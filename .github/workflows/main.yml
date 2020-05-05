@@ -1,18 +1,7 @@
+name: 'gh-deploy'
 on: [push]
 
 jobs:
-    hello_world_job:
-        runs-on: ubuntu-latest
-        name: A job to say hello
-        steps:
-        -   name: Hello world action step
-            id: hello
-            uses: Saw-mon-and-Natalie/hello-world-docker-action@v1.0.1
-            with:
-                who-to-greet: 'Mona the Octocat'
-        -   name: Get the output time
-            run: echo "The time was ${{ steps.hello.outputs.time }}"
-    
     deploy:
         runs-on: ubuntu-latest
         name: testing gh-pages deploy
@@ -21,7 +10,7 @@ jobs:
             uses: actions/checkout@master
 
         -   name: Build and deploy
-            uses: Saw-mon-and-Natalie/gh-pages-deployment-action@v1.2.0
+            uses: Saw-mon-and-Natalie/gh-pages-deployment-action@v1.2.1
             env:
                 ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 BASE_BRANCH: master
