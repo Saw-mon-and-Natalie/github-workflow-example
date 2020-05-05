@@ -21,7 +21,7 @@ jobs:
             uses: actions/checkout@master
 
         -   name: Build and deploy
-            uses: Saw-mon-and-Natalie/gh-pages-deployment-action@v1.0.23
+            uses: Saw-mon-and-Natalie/gh-pages-deployment-action@master
             env:
                 ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 BASE_BRANCH: master
