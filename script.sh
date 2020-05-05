@@ -2,7 +2,7 @@
 
 set -e
 
-# why didn't it run?
+# why didn't it run??
 
 mkdir -p dist
 
